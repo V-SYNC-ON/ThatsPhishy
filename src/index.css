@@ -1,0 +1,36 @@
+/* TODO: Add Fonts- Syne, DM Sans, Oxanium from google fonts, and implement it all over */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Oxanium:wght@400;500;700&family=Syne:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+
+  --grid-size: 10px;
+  --grid-strength: 1px;
+  --grid-dash: 1px;
+  --grid-gap: 2px;
+  --grid-color: #F2FFFF;
+  --paper-color: #fff;
+
+  background-color: var(--paper-color);
+  background-size: var(--grid-dash) var(--grid-dash), var(--grid-size) var(--grid-size);
+  background-image:
+  linear-gradient(to bottom, transparent var(--grid-gap), var(--paper-color) var(--grid-gap)), 
+  linear-gradient(to right, var(--grid-color) var(--grid-strength), transparent var(--grid-strength)),
+  linear-gradient(to right, transparent var(--grid-gap), var(--paper-color) var(--grid-gap)),
+  linear-gradient(to bottom, var(--grid-color) var(--grid-strength), transparent var(--grid-strength));
+
+}
+
+#root {
+  width: 100%;
+}
+
+.Toastify__toast-body {
+  font-family: Oxanium, sans-serif;
+}
