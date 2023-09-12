@@ -36,19 +36,25 @@ export default function Predict({ onPredict }: { onPredict: () => void }) {
             toast.update(toastID, {
                 render: 'Analysis Complete!',
                 type: 'success',
-                progress: 1,
-                autoClose: 5000
+                isLoading: false,
+                progress: 0.99
             })
-
             onPredict()
         })
-        .catch(() => {
+        .catch((err) => {
             toast.update(toastID, {
-                render: 'Error analyzing URL',
+                render: err.response?.data?.error || 'URL Analysis Failed',
                 type: 'error',
-                progress: 1,
-                autoClose: 5000
+                isLoading: false,
+                progress: 0.6
             })
+        })
+        .finally(() => {
+            setTimeout(() => {
+                toast.update(toastID, {
+                    progress: 1
+                })
+            }, 5000)
         })
 
         setLoading(false)
