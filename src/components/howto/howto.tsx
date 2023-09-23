@@ -1,11 +1,15 @@
+import { TransResource, useLanguageContext } from "../../context/language.context";
 import { HowToContainer, HowToContent, HowToDesc, HowToTitle } from "./howto.styles";
 
 export default function HowTo() {
+
+    const { language } = useLanguageContext()
+
     return (
         <HowToContainer>
             <HowToContent>
-                <HowToTitle>How do we Catch Phish?</HowToTitle>
-                <HowToDesc>ThatsPhishy employs state-of-the-art technology and advanced algorithms to meticulously scan websites, ensuring your online safety. Our mission is to provide you with a secure browsing experience, free from phishing threats. Trust ThatsPhishy to keep you protected while you explore the web.</HowToDesc>
+                <HowToTitle>{TransResource[language].howToTitle}</HowToTitle>
+                <HowToDesc>{TransResource[language].howToDesc}</HowToDesc>
             </HowToContent>
         </HowToContainer>
     )

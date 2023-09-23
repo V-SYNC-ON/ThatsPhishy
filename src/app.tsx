@@ -5,22 +5,31 @@ import { GlobalContext, PredictionResult } from "./context/global.context";
 
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { LanguageContext } from "./context/language.context";
 
 export default function App() {
 
     const [prediction, setPrediction] = useState<null | PredictionResult>(null)
+    const [language, setLanguage] = useState<string>(localStorage.getItem('language') || 'english')
     
     return (
-        <GlobalContext.Provider
+        <LanguageContext.Provider
             value={{
-                prediction,
-                setPrediction
+                language,
+                setLanguage
             }}
         >
-            <Home />
-            <ToastContainer 
-                position="bottom-right"
-            />
-        </GlobalContext.Provider>
+            <GlobalContext.Provider
+                value={{
+                    prediction,
+                    setPrediction
+                }}
+            >
+                <Home />
+                <ToastContainer 
+                    position="bottom-right"
+                />
+            </GlobalContext.Provider>
+        </LanguageContext.Provider>
     )
 }
