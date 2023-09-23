@@ -24,6 +24,19 @@ export const NavbarLogo = styled.div`
         object-fit: contain;
         pointer-events: none;
     }
+    
+    .logo__mobile {
+        display: none;
+    }
+
+    @media only screen and (max-width: 990px) {
+        .logo__mobile {
+            display: block;
+        }
+        .logo__desktop {
+            display: none;
+        }
+    }
 `
 
 export const NavbarMenu = styled.div`
@@ -50,7 +63,7 @@ export const NavbarMenu = styled.div`
     }
 
     @media (max-width: 990px) {
-        gap: 2rem;
+        gap: 1.5rem;
 
         p {
             display: none;

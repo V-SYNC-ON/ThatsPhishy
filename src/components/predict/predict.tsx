@@ -5,6 +5,7 @@ import map from '../../assets/map.svg'
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useGlobalContext } from "../../context/global.context";
+import { TransResource, useLanguageContext } from "../../context/language.context";
 
 export default function Predict({ onPredict }: { onPredict: () => void }) {
 
@@ -12,6 +13,7 @@ export default function Predict({ onPredict }: { onPredict: () => void }) {
     const [url, setUrl] = useState<string>("")
 
     const { setPrediction } = useGlobalContext()
+    const { language } = useLanguageContext()
 
     const handlePrediction = () => {
 
@@ -66,14 +68,14 @@ export default function Predict({ onPredict }: { onPredict: () => void }) {
     return (
         <PredictContainer>
             <PredictContent>
-                <h1>Detect Phishing Websites Instantly ⚡️</h1>
+                <h1>{TransResource[language].desc}</h1>
                 <input 
                     type="text"
-                    placeholder="Enter website URL"
+                    placeholder={TransResource[language].placeholder}
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
                 />
-                <button onClick={loading? () => {}: handlePrediction}>Catch Phish 🔍</button>
+                <button onClick={loading? () => {}: handlePrediction}>{TransResource[language].find}</button>
             </PredictContent>
             <PredictMap 
                 src={map}
