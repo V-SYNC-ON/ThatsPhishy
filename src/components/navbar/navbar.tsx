@@ -19,12 +19,12 @@ export default function Navbar() {
     const { language, setLanguage } = useLanguageContext()
 
     const options: LanguageOption[] = [
-        { value: 'english', label: 'English' },
-        { value: 'hindi', label: 'हिन्दी' },
-        { value: 'tamil', label: 'தமிழ்' },
-        { value: 'telugu', label: 'తెలుగు' },
-        { value: 'korean', label: '한국어' },
-        { value: 'japanese', label: '日本語' },
+        { value: 'English', label: 'English' },
+        { value: 'Hindi', label: 'हिन्दी' },
+        { value: 'Tamil', label: 'தமிழ்' },
+        { value: 'Telugu', label: 'తెలుగు' },
+        { value: 'Korean', label: '한국어' },
+        { value: 'Japanese', label: '日本語' },
     ]
 
     const [selectedLanguage, setSelectedLanguage] = useState<LanguageOption | null>(

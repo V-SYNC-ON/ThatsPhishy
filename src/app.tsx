@@ -1,6 +1,6 @@
 import Home from "./containers/home/home";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GlobalContext, PredictionResult } from "./context/global.context";
 
 import { ToastContainer } from "react-toastify";
@@ -10,7 +10,11 @@ import { LanguageContext } from "./context/language.context";
 export default function App() {
 
     const [prediction, setPrediction] = useState<null | PredictionResult>(null)
-    const [language, setLanguage] = useState<string>(localStorage.getItem('language') || 'english')
+    const [language, setLanguage] = useState<string>(localStorage.getItem('language') || 'English')
+
+    useEffect(() => {
+        setPrediction(null)
+    }, [language])
     
     return (
         <LanguageContext.Provider

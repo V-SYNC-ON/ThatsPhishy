@@ -6,7 +6,7 @@ interface LanguageContextProps {
 }
 
 const defaultValue: LanguageContextProps = {
-    language: "english"
+    language: "English"
 }
 
 export const LanguageContext = createContext<LanguageContextProps>(defaultValue)
@@ -24,7 +24,7 @@ interface LanguageData {
 }
 
 export const TransResource: Record<string, LanguageData> = {
-    "english": {
+    "English": {
         desc: "Detect Phishing Websites Instantly ⚡️",
         placeholder: "Enter website URL",
         find: "Catch Phish 🔍",
@@ -33,7 +33,7 @@ export const TransResource: Record<string, LanguageData> = {
         checkComplete: "Phishing Check Complete ⚡️",
         resultParams: ["Website Name", "Category", "Description"]
     },
-    "tamil": {
+    "Tamil": {
         desc: "ஃபிஷிங் இணையதளங்களை உடனடியாகக் கண்டறியவும் ⚡️",
         placeholder: "இணையதளத்தை உள்ளிடவும்",
         find: "கெட் ஃபிஷ் 🔍",
@@ -42,7 +42,7 @@ export const TransResource: Record<string, LanguageData> = {
         checkComplete: "ஃபிஷிங் சோதனை முடிந்தது ⚡️",
         resultParams: ["இணையதளத்தின் பெயர்", "வகை", "விளக்கம்"]
     },
-    "hindi": {
+    "Hindi": {
         desc: "फिशिंग वेबसाइट को तुरंत पता लगाएं ⚡️",
         placeholder: "वेबसाइट यूआरएल दर्ज करें",
         find: "फिशिंग को पकड़ें 🔍",
@@ -51,7 +51,7 @@ export const TransResource: Record<string, LanguageData> = {
         checkComplete: "फ़िशिंग जाँच पूर्ण ⚡️",
         resultParams: ["वेबसाइट का नाम", "श्रेणी", "विवरण"]
     },
-    "telugu": {
+    "Telugu": {
         desc: "ఫిషింగ్ వెబ్‌సైట్‌ను త్వరలో కనుగొనండి ⚡️",
         placeholder: "వెబ్‌సైట్ యుఆర్ఎల్‌ను నమోదు చేయండి",
         find: "ఫిషింగ్ ని పట్టించండి 🔍",
@@ -60,7 +60,7 @@ export const TransResource: Record<string, LanguageData> = {
         checkComplete: "ఫిషింగ్ తనిఖీ పూర్తయింది ⚡️",
         resultParams: ["వెబ్‌సైట్ పేరు", "వర్గం", "వివరణ"]
     },
-    "korean": {
+    "Korean": {
         desc: "피싱 웹 사이트를 즉시 감지하십시오. ⚡️",
         placeholder: "웹 사이트 URL 입력",
         find: "피싱을 잡아라 🔍",
@@ -69,7 +69,7 @@ export const TransResource: Record<string, LanguageData> = {
         checkComplete: "피싱체크 완료 ⚡️",
         resultParams: ["웹 사이트 이름", "범주", "설명"]
     },
-    "japanese": {
+    "Japanese": {
         desc: "フィッシングウェブサイトを即座に検出します。 ⚡️",
         placeholder: "ウェブサイトのURLを入力してください",
         find: "フィッシングをキャッチ 🔍",

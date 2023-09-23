@@ -22,11 +22,11 @@ export default function Result() {
                         <span>{TransResource[language].resultParams[1]} : </span>
                         <span 
                             className={
-                                prediction?.status === 'Not Recommended' 
+                                prediction?.status === 'not recommended' 
                                 ? 'NotRecommended' 
                                 : prediction?.status
                             }
-                        >{prediction?.status}
+                        >{prediction?.["language-status"]}
                         </span>
                     </p>
                     <p><span>{TransResource[language].resultParams[2]} :</span><br></br><br></br>{prediction?.description}</p>
@@ -35,9 +35,9 @@ export default function Result() {
             <ResultGauge>
                 <img 
                     src={
-                        prediction?.status === 'Safe' ?
+                        prediction?.status === 'safe' ?
                         safe :
-                        prediction?.status === 'Not Recommended' ?
+                        prediction?.status === 'not recommended' ?
                         not_recommended :
                         risky
                     }

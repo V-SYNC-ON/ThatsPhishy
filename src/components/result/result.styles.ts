@@ -59,13 +59,13 @@ export const ResultStats = styled.div`
         font-weight: 500;
         color: black;
     }
-    .Safe {
+    .safe {
         color: green;
     }
     .NotRecommended {
         color: brown;
     }
-    .Risky {
+    .risky {
         color: red;
     }
 `

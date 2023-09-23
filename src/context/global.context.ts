@@ -4,7 +4,8 @@ export interface PredictionResult {
     description: string,
     domain: string,
     prediction: number,
-    status: 'Safe' | 'Not Recommended' | 'Risky'
+    status: 'safe' | 'not recommended' | 'risky',
+    "language-status": string
 }
 
 interface GlobalContextProps {

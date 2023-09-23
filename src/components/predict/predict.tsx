@@ -31,7 +31,8 @@ export default function Predict({ onPredict }: { onPredict: () => void }) {
         })  
 
         axios.post(import.meta.env.VITE_BASE_API + '/predict', {
-            url
+            url,
+            language: language
         })
         .then((res) => {
             setPrediction!(res.data)
