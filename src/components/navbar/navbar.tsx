@@ -33,8 +33,8 @@ export default function Navbar() {
 
     const handleLanguageChange = (selectedOption: LanguageOption | null) => {
         setSelectedLanguage(selectedOption)
-        setLanguage!(selectedOption?.value || 'english')
-        localStorage.setItem('language', selectedOption?.value || 'english')
+        setLanguage!(selectedOption?.value || 'English')
+        localStorage.setItem('language', selectedOption?.value || 'English')
     }
 
     return (
